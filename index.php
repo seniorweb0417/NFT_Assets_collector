@@ -15,9 +15,12 @@
                 <input type="text" class="form-control mb-2 mr-sm-2"  placeholder="Enter Contract address" id="contract_address">
                 <label for="pwd" class="mr-sm-2 mb-2">Token Id:</label>
                 <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter Token id" id="token_id">
-                <button type="submit" class="btn btn-primary mr-sm-2 mb-2">Get Info</button>
-                <button type="submit" class="btn btn-primary mb-2">Download</button>
+                <button type="button" class="btn btn-primary mr-sm-2 mb-2 get_info_btn">Get Info</button>
+                <button type="button" class="btn btn-success mb-2 download_btn">Download</button>
             </form>
+            <div class="result_wrapper text-center">
+                This is result wrapper
+            </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
