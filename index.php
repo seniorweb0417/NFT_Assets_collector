@@ -12,17 +12,33 @@
             <h1 class="text-center">NFT Assets to PSD Generator</h1>
             <form class="form-inline justify-content-center" action="">
                 <label for="contract_address" class="mr-sm-2 mb-2">Contract Address:</label>
-                <input type="text" class="form-control mb-2 mr-sm-2"  placeholder="Enter Contract address" id="contract_address">
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter Contract address" id="contract_address" required value='0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d'>
                 <label for="pwd" class="mr-sm-2 mb-2">Token Id:</label>
-                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter Token id" id="token_id">
-                <button type="button" class="btn btn-primary mr-sm-2 mb-2 get_info_btn">Get Info</button>
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter Token id" id="token_id" required value="2815">
+                <button type="submit" class="btn btn-primary mr-sm-2 mb-2 get_info_btn">Get Info</button>
                 <button type="button" class="btn btn-success mb-2 download_btn">Download</button>
             </form>
+            <div class="test"></div>
             <div class="result_wrapper text-center">
-                This is result wrapper
+                <div class="info_wrapper row">
+                    <div class="col-12 text-right"><img class="qrcode" src="assets/img/qrcode.jpg"></div>
+                    <div class="col-6 text-left">
+                        <p class="author">AlexxVault</p>
+                        <p class="club">Bored Ape Yacht Club</p>
+                        <p class="tokenid">#2815</p>
+                    </div>
+                    <div class="col-6 text-right">
+                        <p class="ether">Ethereum</p>
+                        <p class="contract">ERC-1155</p>
+                        <p class="address">0x495f...7b5e</p>
+                    </div>
+                </div>
+                <img class="tokenimg" src="https://img.seadn.io/files/d67477e51780cdeaf45fd96d97b1dfa9.png?auto=format&w=600" />
+                <img class="overlay" src="assets/img/overlay.png">
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="assets/js/script.js"></script>
