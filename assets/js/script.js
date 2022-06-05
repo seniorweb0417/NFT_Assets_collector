@@ -28,12 +28,14 @@ $(document).ready(function() {
             alert('Enter token id'); return;
         }
 
-        domtoimage.toJpeg(document.getElementById('result_wrapper'), { quality: 1, width: 1110, height: 1434 })
-        .then(function (dataUrl) {
-            var link = document.createElement('a');
-            link.download = contract_address + '_' + token_id + '.jpeg';
-            link.href = dataUrl;
-            link.click();
-        });
+        domtoimage.toJpeg(
+            document.getElementById('result_wrapper'), 
+            { quality: 1, width: 1110, height: 1434 })
+            .then(function (dataUrl) {
+                var link = document.createElement('a');
+                link.download = contract_address + '_' + token_id + '.jpeg';
+                link.href = dataUrl;
+                link.click();
+            });
     });
 });
