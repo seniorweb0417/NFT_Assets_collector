@@ -18,8 +18,7 @@
                 <button type="submit" class="btn btn-primary mr-sm-2 mb-2 get_info_btn">Get Info</button>
                 <button type="button" class="btn btn-success mb-2 download_btn">Download</button>
             </form>
-            <div class="test"></div>
-            <div class="result_wrapper text-center">
+            <div class="result_wrapper text-center" id="result_wrapper">
                 <div class="info_wrapper row">
                     <div class="col-12 text-right"><img class="qrcode" src="assets/img/qrcode.jpg"></div>
                     <div class="col-6 text-left">
@@ -41,6 +40,7 @@
         <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/dom-to-image.js"></script>
         <script src="assets/js/script.js"></script>
     </body>
 </html>
