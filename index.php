@@ -27,9 +27,13 @@
                         <p class="tokenid">#2815</p>
                     </div>
                     <div class="col-6 text-right">
-                        <p class="ether">Ethereum</p>
-                        <p class="contract">ERC-1155</p>
-                        <p class="address">0x495f...7b5e</p>
+                        <div class="row">
+                            <div class="for_center">
+                                <p class="ether text-center">Ethereum</p>
+                                <p class="contract text-center">ERC-1155</p>
+                                <p class="address text-center">0x495f...7b5e</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="img-wrapper">
