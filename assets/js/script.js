@@ -30,7 +30,7 @@ $(document).ready(function() {
 
         domtoimage.toJpeg(
             document.getElementById('result_wrapper'), 
-            { quality: 1, width: 1110, height: 1434 })
+            { quality: 1, width: 1110, height: 1370 })
             .then(function (dataUrl) {
                 var link = document.createElement('a');
                 link.download = contract_address + '_' + token_id + '.jpeg';
