@@ -32,7 +32,9 @@
                         <p class="address">0x495f...7b5e</p>
                     </div>
                 </div>
-                <img class="tokenimg" src="https://img.seadn.io/files/d67477e51780cdeaf45fd96d97b1dfa9.png?auto=format&w=600" />
+                <div class="img-wrapper">
+                    <img class="tokenimg" src="https://img.seadn.io/files/d67477e51780cdeaf45fd96d97b1dfa9.png?auto=format&w=600" />
+                </div>
                 <img class="overlay" src="assets/img/overlay.png">
             </div>
         </div>
