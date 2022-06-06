@@ -38,7 +38,7 @@ h1 {
 }
 
 .result_wrapper .qrcode {
-    margin-bottom: 50px;
+    margin: 0 10px 50px 0;
 }
 
 .result_wrapper .info_wrapper {
