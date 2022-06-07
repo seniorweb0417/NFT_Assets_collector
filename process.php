@@ -21,8 +21,6 @@
             curl_setopt($ch, CURLOPT_VERBOSE, true);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_USERAGENT, $agent);
-            curl_setopt($ch, CURLOPT_PROXY, '188.114.98.171:443');
-
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             $server_output = curl_exec($ch);
 
