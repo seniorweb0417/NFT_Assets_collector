@@ -9,6 +9,7 @@
     </head>
     <body>
         <div class="container">
+            <div class="text_blend">Blend Text for test</div>
             <h1 class="text-center">NFT Assets to PSD Generator</h1>
             <form class="form-inline justify-content-center" action="">
                 <label for="contract_address" class="mr-sm-2 mb-2">Contract Address:</label>

@@ -71,3 +71,10 @@ h1 {
     height: 100%;
     mix-blend-mode: multiply;
 }
+
+.text_blend {
+    position: absolute;
+    left: 0;
+    right: 0;
+    mix-blend-mode: multiply;
+}
