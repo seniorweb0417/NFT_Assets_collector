@@ -3,7 +3,6 @@
 
     switch ($action) {
         case 'GET_INFO':
-            sleep(2);
             echo 'SUCCESS';
             // echo 'Yes';
             exit();
@@ -26,6 +25,9 @@
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_USERAGENT, $agent);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+            /* need testing */
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-API-KEY:xxxxxx'));
             
             $server_output = curl_exec($ch);
 
