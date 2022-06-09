@@ -3,6 +3,7 @@
 
     switch ($action) {
         case 'GET_INFO':
+            sleep(2);
             echo 'SUCCESS';
             // echo 'Yes';
             exit();

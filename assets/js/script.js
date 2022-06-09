@@ -2,6 +2,7 @@ $(document).ready(function() {
     $('form').submit(function(e) {
         e.preventDefault();
 
+        showLoading(true);
         $.ajax({
             method: 'POST',
             url: 'process.php',
@@ -11,6 +12,7 @@ $(document).ready(function() {
                 tokenid: $('#token_id').val()
             },
             success: function(result) {
+                showLoading(false);
                 if (result == 'SUCCESS') {
                     $('.result_wrapper').removeClass('d-none');
                     $('.error_wrapper').addClass('d-none');
@@ -36,6 +38,7 @@ $(document).ready(function() {
             alert('Enter token id'); return;
         }
 
+        showLoading(true);
         domtoimage.toJpeg(
             document.getElementById('result_wrapper'), { 
                 quality: 1, 
@@ -43,6 +46,7 @@ $(document).ready(function() {
                 height: 1370
             })
             .then(function (dataUrl) {
+                showLoading(false);
                 var link = document.createElement('a');
                 link.download = contract_address + '_' + token_id + '.jpeg';
                 link.href = dataUrl;
@@ -50,3 +54,13 @@ $(document).ready(function() {
             });
     });
 });
+
+function showLoading(state) {
+    if (!state) {
+        $('.lds-facebook').addClass('d-none');
+        $('button').removeAttr('disabled');
+    } else {
+        $('.lds-facebook').removeClass('d-none');
+        $('button').attr('disabled', '');
+    }
+}
