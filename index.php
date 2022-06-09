@@ -16,7 +16,7 @@
                 <label for="pwd" class="mr-sm-2 mb-2">Token Id:</label>
                 <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter Token id" id="token_id" required value="2815">
                 <button type="submit" class="btn btn-primary mr-sm-2 mb-2 get_info_btn">Get Info</button>
-                <button type="button" class="btn btn-success mb-2 download_btn">Download</button>
+                <button type="button" class="btn btn-success mb-2 download_btn" disabled>Download</button>
             </form>
             <div class="result_wrapper text-center" id="result_wrapper">
                 <div class="info_wrapper row">
