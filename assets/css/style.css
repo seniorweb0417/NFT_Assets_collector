@@ -29,6 +29,10 @@ h1 {
     margin: 0 auto;
 }
 
+.error_wrapper {
+    width: 830px;
+}
+
 .result_wrapper .tokenimg {
     position: absolute;
     left: 50%;
