@@ -4,6 +4,7 @@
     switch ($action) {
         case 'GET_INFO':
             echo 'SUCCESS';
+            // echo 'Yes';
             exit();
             $address = isset($_POST['address']) ? trim($_POST['address']) : '';
             $tokenid = isset($_POST['tokenid']) ? trim($_POST['tokenid']) : '';

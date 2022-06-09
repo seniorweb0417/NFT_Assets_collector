@@ -8,17 +8,17 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-        <div class="container">
+        <div class="container w-830">
             <h1 class="text-center">NFT Assets to PSD Generator</h1>
             <form class="form-inline justify-content-center" action="">
-                <label for="contract_address" class="mr-sm-2 mb-2">Contract Address:</label>
-                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter Contract address" id="contract_address" required value='0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d'>
-                <label for="pwd" class="mr-sm-2 mb-2">Token Id:</label>
-                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter Token id" id="token_id" required value="2815">
-                <button type="submit" class="btn btn-primary mr-sm-2 mb-2 get_info_btn">Get Info</button>
-                <button type="button" class="btn btn-success mb-2 download_btn" disabled>Download</button>
+                <label for="contract_address" class="mr-1 mb-2">Contract Address:</label>
+                <input type="text" class="form-control mb-2 mr-1" placeholder="Enter Contract address" id="contract_address" required value='0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d'>
+                <label for="pwd" class="mr-1 mb-2">Token Id:</label>
+                <input type="text" class="form-control mb-2 mr-1" placeholder="Enter Token id" id="token_id" required value="2815">
+                <button type="submit" class="btn btn-primary mr-1 mb-2 get_info_btn">Get Info</button>
+                <button type="button" class="btn btn-success mb-2 download_btn">Download</button>
             </form>
-            <div class="result_wrapper text-center" id="result_wrapper">
+            <div class="result_wrapper text-center d-none" id="result_wrapper">
                 <div class="info_wrapper row">
                     <div class="col-12 text-right"><img class="qrcode" src="assets/img/qrcode.jpg"></div>
                     <div class="col-6 text-left">
@@ -41,7 +41,7 @@
                 </div>
                 <img class="overlay" src="assets/img/overlay.png">
             </div>
-            <div class="error_wrapper">
+            <div class="error_wrapper d-none">
                 <div class="alert alert-danger">
                     <strong>Wrong parameter!</strong> Try again to input contract address and token id.
                 </div>

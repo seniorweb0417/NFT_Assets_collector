@@ -12,10 +12,12 @@ $(document).ready(function() {
             },
             success: function(result) {
                 if (result == 'SUCCESS') {
-                    $('.result_wrapper').css('display', 'block');
+                    $('.result_wrapper').removeClass('d-none');
+                    $('.error_wrapper').addClass('d-none');
                     $('.download_btn').removeAttr('disabled');
                 } else {
-                    $('.error_wrapper').css('display', 'block');
+                    $('.error_wrapper').removeClass('d-none');
+                    $('.result_wrapper').addClass('d-none');
                     $('.download_btn').attr('disabled', '');
                 }
             }
@@ -35,8 +37,11 @@ $(document).ready(function() {
         }
 
         domtoimage.toJpeg(
-            document.getElementById('result_wrapper'), 
-            { quality: 1, width: 830, height: 1370 })
+            document.getElementById('result_wrapper'), { 
+                quality: 1, 
+                width: 830, 
+                height: 1370
+            })
             .then(function (dataUrl) {
                 var link = document.createElement('a');
                 link.download = contract_address + '_' + token_id + '.jpeg';
