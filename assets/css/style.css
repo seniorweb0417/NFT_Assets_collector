@@ -27,10 +27,14 @@ h1 {
     background: #cc28cc;
     padding: 10px;
     margin: 0 auto;
+    display: none;
 }
 
 .error_wrapper {
     width: 830px;
+    margin: 0 auto;
+    padding: 30px;
+    display: none;
 }
 
 .result_wrapper .tokenimg {

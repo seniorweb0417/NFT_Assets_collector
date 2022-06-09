@@ -42,7 +42,9 @@
                 <img class="overlay" src="assets/img/overlay.png">
             </div>
             <div class="error_wrapper">
-                
+                <div class="alert alert-danger">
+                    <strong>Wrong parameter!</strong> Try again to input contract address and token id.
+                </div>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
