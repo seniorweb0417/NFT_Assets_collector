@@ -11,7 +11,13 @@ $(document).ready(function() {
                 tokenid: $('#token_id').val()
             },
             success: function(result) {
-                $('.test').html(result);
+                if (result == 'SUCCESS') {
+                    $('.result_wrapper').css('display', 'block');
+                    $('.download_btn').removeAttr('disabled');
+                } else {
+                    $('.error_wrapper').css('display', 'block');
+                    $('.download_btn').attr('disabled', '');
+                }
             }
         });
     });
