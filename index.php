@@ -23,14 +23,14 @@
                     <div class="col-12 text-right"><img class="qrcode" src="assets/img/qrcode.jpg"></div>
                     <div class="col-6 text-left">
                         <p class="author">AlexxVault</p>
-                        <p class="club">Bored Ape Yacht Club</p>
+                        <p class="contract_name">Bored Ape Yacht Club</p>
                         <p class="tokenid">#2815</p>
                     </div>
                     <div class="col-6 text-right">
                         <div class="row">
                             <div class="for_center">
                                 <p class="ether text-center">Ethereum</p>
-                                <p class="contract text-center">ERC-1155</p>
+                                <p class="schema text-center">ERC-1155</p>
                                 <p class="address text-center">0x495f...7b5e</p>
                             </div>
                         </div>

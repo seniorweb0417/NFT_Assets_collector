@@ -18,23 +18,24 @@ $(document).ready(function() {
                     res = JSON.parse(result);
 
                     if (!('success' in res)) {
+                        var img_url = res.image_url;
+                        var contract_name = res.collection.name;
+                        var token_name = res.name;
+                        var schema = res.asset_contract.schema_name;
+                        var address = res.asset_contract.address;
+
+                        $('.tokenimg').attr('src', img_url);
+                        $('.contract_name').html(contract_name);
+                        $('.tokenid').html($('#token_id').val());
+                        $('.schema').html(schema);
+                        $('.address').html(address);
                         showResult(true);
-                        // $('.result_wrapper').removeClass('d-none');
-                        // $('.error_wrapper').addClass('d-none');
-                        // $('.download_btn').removeAttr('disabled');
                     } else {
                         showResult(false);
-                        // $('.error_wrapper').removeClass('d-none');
-                        // $('.result_wrapper').addClass('d-none');
-                        // $('.download_btn').attr('disabled', '');
                     }
                     console.log(res);
                 } catch(e) {
                     showResult(false);
-
-                    // $('.error_wrapper').removeClass('d-none');
-                    // $('.result_wrapper').addClass('d-none');
-                    // $('.download_btn').attr('disabled', '');
                 }
             }
         });

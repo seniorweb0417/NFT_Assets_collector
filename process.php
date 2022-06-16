@@ -1,6 +1,4 @@
 <?php
-    require_once('vendor/autoload.php');
-
     $action = isset($_POST['action']) ? trim($_POST['action']) : '';
     switch ($action) {
         case 'GET_INFO':

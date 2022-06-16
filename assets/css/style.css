@@ -61,6 +61,8 @@ h1 {
     font-family: 'Helvetica';
     font-size: 25px;
     color: white;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .result_wrapper .info_wrapper .for_center {
