@@ -22,7 +22,7 @@
                 <div class="info_wrapper row">
                     <div class="col-12 text-right"><img class="qrcode" src="assets/img/qrcode.jpg"></div>
                     <div class="col-6 text-left">
-                        <p class="author">AlexxVault</p>
+                        <p class="owner">AlexxVault</p>
                         <p class="contract_name">Bored Ape Yacht Club</p>
                         <p class="tokenid">#2815</p>
                     </div>

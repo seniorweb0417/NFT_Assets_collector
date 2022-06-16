@@ -19,12 +19,13 @@ $(document).ready(function() {
 
                     if (!('success' in res)) {
                         var img_url = res.image_url;
+                        var owner = res.collection.owner.user.username;
                         var contract_name = res.collection.name;
-                        var token_name = res.name;
                         var schema = res.asset_contract.schema_name;
                         var address = res.asset_contract.address;
 
                         $('.tokenimg').attr('src', img_url);
+                        $('.owner').html(owner);
                         $('.contract_name').html(contract_name);
                         $('.tokenid').html($('#token_id').val());
                         $('.schema').html(schema);
