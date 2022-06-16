@@ -12,9 +12,9 @@
             <h1 class="text-center">NFT Assets to PSD Generator</h1>
             <form class="form-inline justify-content-center" action="">
                 <label for="contract_address" class="mr-1 mb-2">Contract Address:</label>
-                <input type="text" class="form-control mb-2 mr-1" placeholder="Enter Contract address" id="contract_address" required value='0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d'>
+                <input type="text" class="form-control mb-2 mr-1" placeholder="Enter Contract address" id="contract_address" required value=''>
                 <label for="pwd" class="mr-1 mb-2">Token Id:</label>
-                <input type="text" class="form-control mb-2 mr-1" placeholder="Enter Token id" id="token_id" required value="2815">
+                <input type="text" class="form-control mb-2 mr-1" placeholder="Enter Token id" id="token_id" required value="">
                 <button type="submit" class="btn btn-primary mr-1 mb-2 get_info_btn">Get Info</button>
                 <button type="button" class="btn btn-success mb-2 download_btn" disabled>Download</button>
             </form>
