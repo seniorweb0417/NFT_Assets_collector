@@ -13,14 +13,28 @@ $(document).ready(function() {
             },
             success: function(result) {
                 showLoading(false);
-                if (result == 'SUCCESS') {
-                    $('.result_wrapper').removeClass('d-none');
-                    $('.error_wrapper').addClass('d-none');
-                    $('.download_btn').removeAttr('disabled');
-                } else {
-                    $('.error_wrapper').removeClass('d-none');
-                    $('.result_wrapper').addClass('d-none');
-                    $('.download_btn').attr('disabled', '');
+                var res = [];
+                try {
+                    res = JSON.parse(result);
+
+                    if (!('success' in res)) {
+                        showResult(true);
+                        // $('.result_wrapper').removeClass('d-none');
+                        // $('.error_wrapper').addClass('d-none');
+                        // $('.download_btn').removeAttr('disabled');
+                    } else {
+                        showResult(false);
+                        // $('.error_wrapper').removeClass('d-none');
+                        // $('.result_wrapper').addClass('d-none');
+                        // $('.download_btn').attr('disabled', '');
+                    }
+                    console.log(res);
+                } catch(e) {
+                    showResult(false);
+
+                    // $('.error_wrapper').removeClass('d-none');
+                    // $('.result_wrapper').addClass('d-none');
+                    // $('.download_btn').attr('disabled', '');
                 }
             }
         });
@@ -62,5 +76,17 @@ function showLoading(state) {
     } else {
         $('.lds-facebook').removeClass('d-none');
         $('button').attr('disabled', '');
+    }
+}
+
+function showResult(bRet) {
+    if (bRet) {
+        $('.result_wrapper').removeClass('d-none');
+        $('.error_wrapper').addClass('d-none');
+        $('.download_btn').removeAttr('disabled');
+    } else {
+        $('.error_wrapper').removeClass('d-none');
+        $('.result_wrapper').addClass('d-none');
+        $('.download_btn').attr('disabled', '');
     }
 }

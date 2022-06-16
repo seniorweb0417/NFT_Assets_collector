@@ -1,39 +1,39 @@
 <?php
-    $action = isset($_POST['action']) ? trim($_POST['action']) : '';
+    require_once('vendor/autoload.php');
 
+    $action = isset($_POST['action']) ? trim($_POST['action']) : '';
     switch ($action) {
         case 'GET_INFO':
-            echo 'SUCCESS';
-            // echo 'Yes';
-            exit();
+            // echo 'SUCCESS'; exit();
             $address = isset($_POST['address']) ? trim($_POST['address']) : '';
             $tokenid = isset($_POST['tokenid']) ? trim($_POST['tokenid']) : '';
 
             // Building url
-            $url = 'https://opensea.io/assets/ethereum/' . $address . '/' . $tokenid;
+            $url = 'https://testnets-api.opensea.io/api/v1/asset/' . $address . '/' . $tokenid;
 
-            // Scrap data from specific url
-            $agent = 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.0.3705; .NET CLR 1.1.4322)';
-            $agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36';
+            $curl = curl_init();
+
+            curl_setopt_array($curl, [
+              CURLOPT_URL => $url,
+              CURLOPT_RETURNTRANSFER => true,
+              CURLOPT_ENCODING => "",
+              CURLOPT_MAXREDIRS => 10,
+              CURLOPT_TIMEOUT => 30,
+              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+              CURLOPT_CUSTOMREQUEST => "GET",
+            ]);
             
-            $ch = curl_init();
-
-            curl_setopt($ch, CURLOPT_URL, $url);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            curl_setopt($ch, CURLOPT_VERBOSE, true);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_USERAGENT, $agent);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-            /* need testing */
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-API-KEY:xxxxxx'));
+            $response = curl_exec($curl);
+            $err = curl_error($curl);
             
-            $server_output = curl_exec($ch);
+            curl_close($curl);
+            
+            if ($err) {
+              echo "cURL Error #:" . $err;
+            } else {
+              echo $response;
+            }
 
-            curl_close ($ch);
-
-            echo $server_output;
             break;
         default: 
             break;
