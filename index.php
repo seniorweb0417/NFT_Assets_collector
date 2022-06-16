@@ -29,7 +29,7 @@
                     <div class="col-6 text-right">
                         <div class="row">
                             <div class="for_center">
-                                <p class="ether text-center">Ethereum</p>
+                                <p class="net_name text-center">Ethereum</p>
                                 <p class="schema text-center">ERC-1155</p>
                                 <p class="address text-center">0x495f...7b5e</p>
                             </div>

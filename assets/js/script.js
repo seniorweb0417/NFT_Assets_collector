@@ -19,8 +19,12 @@ $(document).ready(function() {
 
                     if (!('success' in res)) {
                         var img_url = res.image_url;
-                        var owner = res.collection.owner.user.username;
+                        var owner = res.owner.user.username;
                         var contract_name = res.collection.name;
+                        var blockchain = res.permalink;
+                        blockchain = blockchain.replace('https://testnets.opensea.io/', '');
+                        var arr = blockchain.split('/');
+                        var net_name = capitalizeFirstLetter(arr[1]);
                         var schema = res.asset_contract.schema_name;
                         var address = res.asset_contract.address;
 
@@ -28,8 +32,10 @@ $(document).ready(function() {
                         $('.owner').html(owner);
                         $('.contract_name').html(contract_name);
                         $('.tokenid').html($('#token_id').val());
+                        $('.net_name').html(net_name);
                         $('.schema').html(schema);
                         $('.address').html(address);
+
                         showResult(true);
                     } else {
                         showResult(false);
@@ -37,6 +43,7 @@ $(document).ready(function() {
                     console.log(res);
                 } catch(e) {
                     showResult(false);
+                    console.log(res);
                 }
             }
         });
@@ -91,4 +98,8 @@ function showResult(bRet) {
         $('.result_wrapper').addClass('d-none');
         $('.download_btn').attr('disabled', '');
     }
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
