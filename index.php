@@ -20,13 +20,15 @@
             </form>
             <div class="result_wrapper text-center d-none" id="result_wrapper">
                 <div class="info_wrapper row">
-                    <div class="col-12 text-right"><img class="qrcode" src="assets/img/qrcode.jpg"></div>
-                    <div class="col-6 text-left">
+                    <div class="col-3 text-left fee">9.8</div>
+                    <div class="col-6 text-center"><img class="logo" src="assets/img/logo.png"></div>
+                    <div class="col-3 text-right"><img class="qrcode" src="assets/img/qrcode.jpg"></div>
+                    <div class="col-8 text-left">
                         <p class="owner">AlexxVault</p>
                         <p class="contract_name">Bored Ape Yacht Club</p>
                         <p class="tokenid">#2815</p>
                     </div>
-                    <div class="col-6 text-right">
+                    <div class="col-4 text-right">
                         <div class="row">
                             <div class="for_center">
                                 <p class="net_name text-center">Ethereum</p>
