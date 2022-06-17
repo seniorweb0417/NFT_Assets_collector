@@ -62,16 +62,16 @@ $(document).ready(function() {
         }
 
         showLoading(true);
-        domtoimage.toJpeg(
+        domtoimage.toPng(
             document.getElementById('result_wrapper'), { 
                 quality: 1, 
-                width: 830, 
-                height: 1370
+                width: 840, 
+                height: 1380
             })
             .then(function (dataUrl) {
                 showLoading(false);
                 var link = document.createElement('a');
-                link.download = contract_address + '_' + token_id + '.jpeg';
+                link.download = contract_address + '_' + token_id + '.png';
                 link.href = dataUrl;
                 link.click();
             });
