@@ -79,11 +79,12 @@ h1 {
 .result_wrapper .info_wrapper p {
     font-family: 'Helvetica';
     font-size: 25px;
+    line-height: 30px;
     color: white;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    min-height: 30px;
+    min-height: 25px;
     margin-bottom: 0px;
 }
 
@@ -100,7 +101,7 @@ h1 {
 
 .result_wrapper .img-wrapper {
     position: relative;
-    height: calc(100% - 296px);
+    height: calc(100% - 272px);
     background: white;
     margin-top: 20px;
 }
