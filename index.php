@@ -18,7 +18,7 @@
                 <button type="submit" class="btn btn-primary mr-1 mb-2 get_info_btn">Get Info</button>
                 <button type="button" class="btn btn-success mb-2 download_btn" disabled>Download</button>
             </form>
-            <div class="result_wrapper text-center d-none" id="result_wrapper">
+            <div class="result_wrapper text-center" id="result_wrapper">
                 <div class="real_wrapper">
                     <div class="info_wrapper row">
                         <div class="col-3 text-left fee"><img class="marks" src="assets/img/score.png"></div>
