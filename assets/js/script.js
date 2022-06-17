@@ -26,7 +26,7 @@ $(document).ready(function() {
                         var arr = blockchain.split('/');
                         var net_name = capitalizeFirstLetter(arr[1]);
                         var schema = res.asset_contract.schema_name;
-                        var address = res.asset_contract.address;
+                        var address = res.asset_contract.address.substr(0, 6) + '...' + res.asset_contract.address.substr(-4, 4);
 
                         $('.tokenimg').attr('src', img_url);
                         $('.owner').html(owner);
