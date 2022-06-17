@@ -20,7 +20,7 @@
             </form>
             <div class="result_wrapper text-center d-none" id="result_wrapper">
                 <div class="info_wrapper row">
-                    <div class="col-3 text-left fee"><img class="logo" src="assets/img/score.png"></div>
+                    <div class="col-3 text-left fee"><img class="marks" src="assets/img/score.png"></div>
                     <div class="col-6 text-center"><img class="logo" src="assets/img/logo.png"></div>
                     <div class="col-3 text-right"><img class="qrcode" src="assets/img/qrcode.jpg"></div>
                     <div class="col-8 text-left">
