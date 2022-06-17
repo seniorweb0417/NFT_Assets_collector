@@ -79,6 +79,7 @@ h1 {
 
 .result_wrapper .qrcode {
     margin: -2px 10px 50px 0;
+    width: 74%;
 }
 
 .result_wrapper .info_wrapper {
